@@ -201,14 +201,14 @@ header li>a{
     a.header Top
 *...............*/
 
-.header-top .wraper{
+.header-top .wrapper{
  font-size: var(--font-small);
  font-weight: var(--fw3);
  justify-content: space-between;
  line-height: 42px;
  
 }
-.header-top .wraper ul{
+.header-top .wrapper ul{
     gap: 2em;
 }
 .header-top li{
