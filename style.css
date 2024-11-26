@@ -139,7 +139,8 @@ Reusable selector
 }
 .icon-small {
   font-size: 1.25em;
-  margin: auto;
+  /* margin: auto; */
+  margin-left: auto;
 }
 .icon-large {
   font-size: 1.75em;
@@ -200,9 +201,16 @@ Reusable selector
   gap: 1em;
   transition: var(--trans-color);
 }
+/* text */
 .mini-text{
   font-size: var(--font--smaller);
   color: var(--light-text-color);
+}
+/* list */
+.dpt-menu >ul>li>a{
+  font-size: var(--font-small);
+  height: 46px;
+  align-items: center;
 }
 /* ...........
 *structure styling
@@ -415,6 +423,50 @@ nav .fly-item {
 *01.HEADER
     d.Search Form
 *...............*/
+.header-main .right {
+  flex: 1;
+
+}
+form {
+  position: relative;
+}
+form.search input{
+  line-height: 3.25em;
+  padding: 0 7em 0 4.5em;
+  border: 0;
+  outline: 0;
+  width: var(--percent100);
+  border-radius: 7px;
+  font-size: 0.9em;
+  font-weight: var(--fw3);
+}
+form.search :where(span,button){
+  position: absolute;
+  top: 0;
+  padding: 0.55em 1.5em;
+  font-size: 1em;
+  color: var(--light-text-color);
+  height: var(--percent100);
+}
+form.search button{
+  right: 0;
+  border: 0;
+  outline: 0;
+  font-size: 0.875em;
+  font-weight: var(--fw6);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  transition: var(--trans-background);
+  
+}
+form.search button:hover{
+  background-color: var(--dark-color);
+}
+/*................
+* 02.SLIDER
+*...............*/
 @media screen and (min-width: 992px) {
   .container {
     padding: 0 2em;
@@ -503,5 +555,25 @@ nav .fly-item {
     font-weight: var(--fw8);
     text-align: center;
     color: var(--secondary-dark-color);
+  }
+  /* search box */
+  .header-main .right{
+    max-width: 600px;
+    margin-left: auto;
+  }
+  /* Department menu */
+  .dpt-menu{
+    position: absolute;
+    top: var(--percent100);
+    width: 300px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .dpt-menu >ul>li>a{
+    font-weight: var(--fw5);
+    padding: 0 1.5em;
+    border-bottom: 1px solid var(--border-color);
   }
 }
