@@ -15,3 +15,14 @@ function copyMenu(){
 
 }
 copyMenu();
+// show sub menu in mobile
+const subMenu = document.querySelectorAll('.has-child .icon-small');
+subMenu.forEach((menu)=>{
+    menu.addEventListener('click',toggle);
+});
+function toggle(e){
+    e.preventDefault();
+    subMenu.forEach((item)=>{item != this? item.closest('.has-child').classList.remove('expand'):null});
+    if(this.closest('.has-child').classList!= 'expand');
+    this.closest('.has-child').classList.toggle('expand')
+}
