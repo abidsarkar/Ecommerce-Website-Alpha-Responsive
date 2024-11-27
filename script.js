@@ -15,6 +15,17 @@ function copyMenu(){
 
 }
 copyMenu();
+// show mobile menu
+const menuButton = document.querySelector('.trigger'),
+    closeButton = document.querySelector('.t-class'),
+    addClass = document.querySelector('.site');
+menuButton.addEventListener('click', function(){
+addClass.classList.toggle('showMenu');
+});
+closeButton.addEventListener('click',function(){
+    addClass.classList.remove('showMenu');
+});
+
 // show sub menu in mobile
 const subMenu = document.querySelectorAll('.has-child .icon-small');
 subMenu.forEach((menu)=>{
