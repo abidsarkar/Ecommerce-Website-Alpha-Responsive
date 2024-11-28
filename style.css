@@ -12,11 +12,11 @@ fonts:
 
   --white-color: #ffffff;
   --light-bg-color: #f2f3f5;
-  /* --light-text-color: #e5e8ec; bad color chose */
+  /* --light-text-color: #7c899a; bad color chose */
   --light-text-color: #1867ce;
+  /* --border-color: #a9b4c5; */
+  --border-color: #e5e8ec;
   --dark-color: #0a021c;
-
-  --border-color: #a9b4c5;
 
   --font-small: 13px;
   --font--smaller: 11px;
@@ -39,8 +39,9 @@ fonts:
   padding: 0;
   box-sizing: border-box;
 }
+::before,::after{box-sizing: border-box;}
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -73,10 +74,10 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 h1 {
-  font-size: calc(1.3em +1vw);
+  font-size: calc(1.3em + 1vw);
   font-weight: var(--fw8);
   line-height: 1;
 }
@@ -98,7 +99,7 @@ Reusable selector
 .container {
   max-height: 1280px;
   margin: 0 auto;
-  padding: 0 0.998em;
+  padding: 0 0.938em;
 }
 .column {
   margin-left: -0.938em;
@@ -649,7 +650,37 @@ form.search button:hover{
   opacity: 1;
 }
 /*................
+* 04.PRODUCT BLOCK STYLE
+*...............*/
+.sectop{
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--border-color);
+}
+.sectop h2{
+  position: relative;
+  font-size: 1.5em;
+  font-weight: var(--fw7);
+}
+.sectop h2 span:not(.circle) {
+  padding: 0 0 0 2em;
+}
+.sectop h2 .circle {
+  top: -5px;
+}
+.trending .products {
+  flex: 0 0 33.3333%;
+}
+/*................
 * 04.PRODUCT
+    a.Global Product
+*...............*/
+
+
+/*................
+* 04.PRODUCT
+    b.Big Product
 *...............*/
 @media screen and (min-width: 992px) {
   .container {
