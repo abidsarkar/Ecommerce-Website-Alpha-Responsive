@@ -39,9 +39,12 @@ fonts:
   padding: 0;
   box-sizing: border-box;
 }
-::before,::after{box-sizing: border-box;}
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -74,7 +77,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 h1 {
   font-size: calc(1.3em + 1vw);
@@ -172,17 +175,16 @@ Reusable selector
   width: fit-content;
   border-radius: 2em;
   transform: var(--trans-background-color);
-
 }
 /* button */
-.primary-button{
+.primary-button {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
-.primary-button:hover{
+.primary-button:hover {
   background-color: var(--dark-color);
 }
-.secondary-button{
+.secondary-button {
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
 }
@@ -190,25 +192,24 @@ Reusable selector
   background-color: var(--light-bg-color);
   color: var(--secondary-dark-color);
 }
-.light-button{
+.light-button {
   background-color: var(--light-bg-color);
 }
-.light-button:hover{
+.light-button:hover {
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
 }
-.view-all{
+.view-all {
   font-size: var(--font-small);
   display: flex;
   gap: 1em;
   transition: var(--trans-color);
 }
 /* text */
-.mini-text{
+.mini-text {
   font-size: var(--font--smaller);
   color: var(--light-text-color);
 }
-
 
 /* ...........
 *structure styling
@@ -314,7 +315,7 @@ Reusable selector
   margin-right: 0.5em;
 }
 .logo a {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 1.75em;
   position: relative;
   font-weight: var(--fw8);
@@ -333,7 +334,7 @@ Reusable selector
   z-index: -1;
 }
 .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 28px;
   height: 28px;
@@ -389,7 +390,7 @@ nav .fly-item {
 *01.HEADER
     c.Header main,Departments Category
 *...............*/
-.header-main{
+.header-main {
   background-color: var(--secondary-dark-color);
   padding: 1.5em 0;
   margin-bottom: 2em;
@@ -398,7 +399,7 @@ nav .fly-item {
   position: relative;
   z-index: 10;
 }
-.dpt-cat .dpt-head{
+.dpt-cat .dpt-head {
   position: relative;
   width: 300px;
   padding: 0.75em 1.5em;
@@ -418,15 +419,15 @@ nav .fly-item {
   height: 60px;
   width: 60px;
 }
-.dpt-menu >ul>li>a{
+.dpt-menu > ul > li > a {
   font-size: var(--font-small);
   height: 46px;
   align-items: center;
 }
-.dpt-menu .has-child:hover ul{
+.dpt-menu .has-child:hover ul {
   display: block;
 }
-.dpt-menu .has-child li a:hover{
+.dpt-menu .has-child li a:hover {
   text-decoration: underline;
 }
 /*................
@@ -435,12 +436,11 @@ nav .fly-item {
 *...............*/
 .header-main .right {
   flex: 1;
-
 }
 form {
   position: relative;
 }
-form.search input{
+form.search input {
   line-height: 3.25em;
   padding: 0 7em 0 4.5em;
   border: 0;
@@ -450,7 +450,7 @@ form.search input{
   font-size: 0.9em;
   font-weight: var(--fw3);
 }
-form.search :where(span,button){
+form.search :where(span, button) {
   position: absolute;
   top: 0;
   padding: 0.55em 1.5em;
@@ -458,7 +458,7 @@ form.search :where(span,button){
   color: var(--light-text-color);
   height: var(--percent100);
 }
-form.search button{
+form.search button {
   right: 0;
   border: 0;
   outline: 0;
@@ -469,9 +469,8 @@ form.search button{
   border-radius: 0 7px 7px 0;
   cursor: pointer;
   transition: var(--trans-background);
-  
 }
-form.search button:hover{
+form.search button:hover {
   background-color: var(--dark-color);
 }
 /*................
@@ -487,21 +486,21 @@ form.search button:hover{
   z-index: 1000;
   transform: translateX(-100%);
   visibility: hidden;
-  transition: transform 0.4s,visibility 0.4s;
+  transition: transform 0.4s, visibility 0.4s;
   will-change: transform, visibility;
 }
-.showMenu .site-off{
+.showMenu .site-off {
   transform: translateX(0);
   visibility: visible;
   transform: transform 0.4s 0s, visibility 0s 0s;
 }
-.off-canvas{
+.off-canvas {
   width: var(--percent100);
   height: var(--percent100);
   touch-action: auto;
   padding: 1.5em;
 }
-.off-canvas .canvas-head{
+.off-canvas .canvas-head {
   color: var(--white-color);
   justify-content: space-between;
   padding: 1.5em;
@@ -509,11 +508,11 @@ form.search button:hover{
   background-color: var(--secondary-dark-color);
   border-bottom-right-radius: 160px 25px;
 }
-.off-canvas .canvas-head .logo{
+.off-canvas .canvas-head .logo {
   z-index: 10;
   position: relative;
 }
-.off-canvas .canvas-head .logo .circle{
+.off-canvas .canvas-head .logo .circle {
   opacity: 0.75;
 }
 .t-class {
@@ -525,7 +524,7 @@ form.search button:hover{
   color: var(--white-color);
   transition: var(--trans-background-color);
 }
-.t-class:hover{
+.t-class:hover {
   background-color: var(--white-color);
   color: var(--secondary-dark-color);
   opacity: 0.75;
@@ -538,7 +537,7 @@ form.search button:hover{
   background-color: var(--light-bg-color);
   border-radius: 7px 7px 0 0;
 }
-.off-canvas .has-child > :where(ul, .mega){
+.off-canvas .has-child > :where(ul, .mega) {
   font-size: var(--font-small);
   font-weight: var(--fw3);
   line-height: 28px;
@@ -546,13 +545,13 @@ form.search button:hover{
   height: auto;
   max-height: 0;
   overflow: hidden;
-  transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.off-canvas .expand > :where(ul, .mega){
+.off-canvas .expand > :where(ul, .mega) {
   max-height: 2000px;
 }
 .off-canvas .thetop-nav ul,
-.off-canvas nav > ul{
+.off-canvas nav > ul {
   flex-direction: column;
   align-items: flex-start;
   font-size: var(--font-small);
@@ -561,7 +560,7 @@ form.search button:hover{
   margin: 1.25em 0;
   border-top: 1px solid var(--border-color);
 }
-.off-canvas nav .mega{
+.off-canvas nav .mega {
   padding: 0;
 }
 .off-canvas nav .mega .products {
@@ -577,7 +576,12 @@ form.search button:hover{
 .off-canvas .has-child {
   width: var(--percent100);
 }
-.off-canvas .thetop-nav .right >ul >:where(:nth-child(4), li:nth-child(5))>a {
+.off-canvas
+  .thetop-nav
+  .right
+  > ul
+  > :where(:nth-child(4), li:nth-child(5))
+  > a {
   display: none;
 }
 .off-canvas .thetop-nav .right ul ul {
@@ -598,8 +602,8 @@ form.search button:hover{
   position: relative;
   height: 474px;
 }
-.slider .item::before{
-  content: '';
+.slider .item::before {
+  content: "";
   position: absolute;
   top: 30%;
   left: 0;
@@ -608,16 +612,16 @@ form.search button:hover{
   background-color: var(--white-color);
   z-index: 1;
   filter: blur(50px);
-  opacity: .8;
+  opacity: 0.8;
 }
-.slider .text-content{
+.slider .text-content {
   position: relative;
   height: var(--percent100);
   justify-content: flex-end;
   padding: 0 0 10% 10%;
   z-index: 1;
 }
-.slider h4{
+.slider h4 {
   font-size: var(--font-small);
   font-weight: var(--fw7);
   width: fit-content;
@@ -626,7 +630,7 @@ form.search button:hover{
   color: var(--white-color);
   border-radius: 4px;
 }
-.text-content :where(h2,h3) span:last-child {
+.text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -644,7 +648,7 @@ form.search button:hover{
 }
 .brands .item img {
   opacity: 0.25;
-  transition:  opacity 0.3s;
+  transition: opacity 0.3s;
 }
 .brands .item a:hover img {
   opacity: 1;
@@ -652,13 +656,13 @@ form.search button:hover{
 /*................
 * 04.PRODUCT BLOCK STYLE
 *...............*/
-.sectop{
+.sectop {
   justify-content: space-between;
   padding-bottom: 0.5em;
   margin-bottom: 2em;
   border-bottom: 1px solid var(--border-color);
 }
-.sectop h2{
+.sectop h2 {
   position: relative;
   font-size: 1.5em;
   font-weight: var(--fw7);
@@ -669,18 +673,100 @@ form.search button:hover{
 .sectop h2 .circle {
   top: -5px;
 }
-.trending .products {
-  flex: 0 0 33.3333%;
-}
+
 /*................
 * 04.PRODUCT
     a.Global Product
 *...............*/
-
-
+.products .offer {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.products .offer p {
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.products .offer ul {
+  gap: 1em;
+}
+.products .offer ul li {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  padding: 0.5em;
+  line-height: initial;
+  color: var(--secondary-dark-color);
+  background-color: var(--light-bg-color);
+  border-radius: 5px;
+}
+.products .offer ul li:not(:last-child)::before {
+  content: ":";
+  position: absolute;
+  right: -0.6em;
+  color: var(--light-text-color);
+}
+.products :where(.image, .thumbnail) img{
+transition: transform 0.3s;
+}
+.products :where(.image, .thumbnail):hover img{
+  transform: scale(1.1);
+}
+.products .hoverable{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.products .hoverable li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: var(--percent50);
+  line-height: 1;
+  background-color: var(--white-color);
+  opacity: 0.5;
+  transition: var(--trans-background-color),opacity 0.3ss;
+}
+.products .item:hover .hoverable li a{
+  opacity: 1;
+}
+.products .hoverable li a:hover{
+  color: var(--white-color);
+  background-color: var(--dark-color);
+}
+.products .hoverable li.active a:hover{
+  background-color: var(--primary-color);
+}
+.products .hoverable li:not(.active){
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.products .item:hover .hoverable li {
+  transform: translateX(0);
+  opacity: 1;
+}
+.products .hoverable li:last-child {
+  transition-delay: 0.1s;
+}
 /*................
 * 04.PRODUCT
     b.Big Product
+*...............*/
+.products.big .item{
+  flex-direction: column;
+  padding: 2.5em;
+  border: 2px solid var(--secondary-dark-color);
+  border-radius: 7px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+/*................
+* 04.PRODUCT
+    c.min Product
 *...............*/
 @media screen and (min-width: 992px) {
   .container {
@@ -718,7 +804,7 @@ form.search button:hover{
     z-index: 100;
     display: none;
   }
-  nav li.has-child:hover .mega{
+  nav li.has-child:hover .mega {
     display: block;
   }
   nav .mega .wrapper {
@@ -772,12 +858,12 @@ form.search button:hover{
     color: var(--secondary-dark-color);
   }
   /* search box */
-  .header-main .right{
+  .header-main .right {
     max-width: 600px;
     margin-left: auto;
   }
   /* Department menu */
-  .dpt-menu{
+  .dpt-menu {
     position: absolute;
     top: var(--percent100);
     width: 300px;
@@ -786,13 +872,13 @@ form.search button:hover{
     border-top: 0;
     border-bottom: 0;
   }
-  .dpt-menu >ul>li>a{
+  .dpt-menu > ul > li > a {
     font-weight: var(--fw5);
     padding: 0 1.5em;
     border-bottom: 1px solid var(--border-color);
   }
-  .dpt-menu .has-child >ul,
-  .dpt-menu .mega{
+  .dpt-menu .has-child > ul,
+  .dpt-menu .mega {
     position: absolute;
     top: 0;
     left: var(--percent100);
@@ -810,41 +896,52 @@ form.search button:hover{
     background-size: auto;
   }
   /* showing the first sub menu */
-  .dpt-menu .mega{
+  .dpt-menu .mega {
     display: none;
   }
-  .dpt-menu .beauty ul{
+  .dpt-menu .beauty ul {
     background-image: url(assets/menu/menu_bg1.jpg);
   }
-  .dpt-menu .electronic ul{
+  .dpt-menu .electronic ul {
     background-image: url(assets/menu/menu_bg2.jpg);
   }
-  .dpt-menu .fashion ul{
+  .dpt-menu .fashion ul {
     background-image: url(assets/menu/menu_bg3.jpg);
   }
-  .dpt-menu .homekit .mega{
+  .dpt-menu .homekit .mega {
     background-image: url(assets/menu/menu_bg4.jpg);
   }
-  .dpt-menu .has-child> :where(ul,.mega)::before{
-    content: '';
+  .dpt-menu .has-child > :where(ul, .mega)::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(225,225,225,1)0%,rgba(225,225,225,0)100%);
+    background: linear-gradient(
+      90deg,
+      rgba(225, 225, 225, 1) 0%,
+      rgba(225, 225, 225, 0) 100%
+    );
   }
-  .dpt-menu .mega{
+  .dpt-menu .mega {
     width: auto;
     min-width: var(--percent100);
     /* display: flex; */
   }
-  .dpt-menu .has-child:hover .mega{
+  .dpt-menu .has-child:hover .mega {
     display: flex;
   }
   /* slider */
-  .slider >div>.wrapper{
-    width: calc(100%  - (300px + 2em));/*must space after '+' in (300px + 2em)*/
+  .slider > div > .wrapper {
+    width: calc(100% - (300px + 2em)); /*must space after '+' in (300px + 2em)*/
     margin-left: auto;
+  }
+  /* products */
+  .trending .products {
+    flex: 0 0 33.3333%;
+  }
+  .products .big .media{
+    max-width: 373px;
   }
 }
