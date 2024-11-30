@@ -691,8 +691,8 @@ form.search button:hover {
 }
 .products .offer ul li {
   position: relative;
-  width: auto;
-  /* width: 34px; */
+  /* width: auto; */
+  width: 34px;
   height: 34px;
   padding: 0.5em;
   line-height: initial;
@@ -775,8 +775,8 @@ form.search button:hover {
   flex-direction: column;
 }
 .products:where(.big, .main, .one) .content {
-	gap: 0.7em;
-	margin-top: 1.25em;
+  gap: 0.7em;
+  margin-top: 1.25em;
 }
 .products .rating {
   display: flex;
@@ -792,10 +792,10 @@ form.search button:hover {
 }
 /* to set width of stars */
 .products .item:where(:nth-child(3), :nth-child(3)) .stars {
-	width: 64px;
+  width: 64px;
 }
 .products h3 {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -819,7 +819,7 @@ form.search button:hover {
   display: flex;
   justify-content: space-between;
 }
-.products .stock .bar{
+.products .stock .bar {
   height: 3px;
   margin-top: 1em;
   background-color: var(--border-color);
@@ -834,7 +834,7 @@ form.search button:hover {
   display: flex;
   position: relative;
 }
-.products .stock-danger{
+.products .stock-danger {
   color: var(--primary-color);
 }
 .flexWrap .row {
@@ -858,7 +858,7 @@ form.search button:hover {
 * 04.PRODUCT
     c.min Product
 *...............*/
-.products.mini .item{
+.products.mini .item {
   margin-bottom: 2em;
 }
 .products.mini .media {
@@ -870,7 +870,7 @@ form.search button:hover {
   margin: 0;
   gap: 0.75;
 }
-.products:where(.mini,.main) h3{
+.products:where(.mini, .main) h3 {
   font-weight: 400;
 }
 /*................
@@ -883,71 +883,70 @@ form.search button:hover {
   padding: 0 0.938em;
   padding-bottom: 2em;
 }
-.products.main .media{
+.products.main .media {
   height: 390px;
 }
 .products.main .footer {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: 0 1em 1em;
-	border-radius: 7px;
-	z-index: 1;
-	background: linear-gradient(
-		0deg,
-		var(--light-bg-color) 0%,
-		var(--white-color) 70%
-	);
-	opacity: 0;
-	visibility: hidden;
-	will-change: opacity;
-	transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 1em 1em;
+  border-radius: 7px;
+  z-index: 1;
+  /* background: linear-gradient(
+    45deg,
+    var(--light-bg-color) 0%,
+    var(--white-color) 70%
+  ); */
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 0.6895133053221288) 0%,
+    rgba(51, 115, 191, 0.3841911764705882) 100%
+  );
+  visibility: hidden;
+  will-change: opacity;
+  transition: all 0.2s ease-in-out;
 }
-
 .products.main .item:hover .footer {
-	opacity: 1;
-	visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
-
 .products.main .footer ul {
-	list-style: disc;
-	padding: 1.25em 0 0 1.25em;
-	line-height: 1.8;
-	border-top: 1px solid var(--border-color);
-	margin-top: 145px;
+  list-style: disc;
+  padding: 1.25em 0 0 1.25em;
+  line-height: 1.8;
+  border-top: 1px solid var(--border-color);
+  margin-top: 125px;
 }
-
 .products.main .item:hover .content > *:not(.footer) {
-	z-index: 3;
+  z-index: 3;
 }
 
 /*................
 * 05.BANNER
 *...............*/
 
-
 /*................
 * 15.RESPONSIVE
 *...............*/
 @media screen and (min-width: 481px) {
-  .products.main .item{
-  flex: 0 0 50%;
-  }
-  
-}
-@media screen and (min-width: 768px){
-  /* must put space after and  */
-  .products .price .current{
-    font-size: 1.25em;
-  }
-  .products.mini{
+  .products.main .item {
     flex: 0 0 50%;
   }
-  .products.main .item{
-    flex: 0 0 33.333%;
-    }
 }
-
+@media screen and (min-width: 768px) {
+  /* must put space after and  */
+  .products .price .current {
+    font-size: 1.25em;
+  }
+  .products.mini {
+    flex: 0 0 50%;
+  }
+  .products.main .item {
+    flex: 0 0 33.333%;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .container {
@@ -1125,7 +1124,10 @@ form.search button:hover {
   .products .big .media {
     max-width: 373px;
   }
-  .products.mini{
+  /* .products.mini{
+    flex: 0 0 25%;
+  } */
+  .products.main .item {
     flex: 0 0 25%;
   }
 }
