@@ -1031,7 +1031,7 @@ form.search button:hover {
   align-items: center;
   gap: 0;
 }
-.footer-info ul li a{
+.footer-info ul li a {
   font-size: 1.25em;
   display: flex;
   align-items: center;
@@ -1047,12 +1047,61 @@ form.search button:hover {
   background-color: var(--border-color);
 }
 .footer-info .logo a {
- margin: 0 0 1em --0.75em; 
+  margin: 0 0 1em --0.75em;
 }
 .footer-info .mini-text {
   margin-top: 2em;
   text-align: center;
 }
+
+/*................
+* 6.BOTTOM MENU
+*...............*/
+.menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 999;
+}
+.menu-bottom nav li {
+  flex: 1;
+}
+.menu-bottom nav li a{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0;
+  color: var(--light-text-color);
+  transition: var(--trans-color);
+}
+.menu-bottom nav li a:hover {
+  color: var(--dark-color);
+}
+.menu-bottom nav li a span {
+  font-size: var(--font--smaller);
+}
+.menu-bottom nav li a i {
+  font-size: 1.25em;
+}
+.menu-bottom .fly-item {
+  right: 50%;
+  width: 16px;
+  border-radius: var(--percent50);
+  margin-right: -20px;
+  background-color: var(--secondary-dark-color);
+}
+/*................
+* 6.BOTTOM MENU
+  a.Search
+*...............*/
+
 /*................
 * 15.RESPONSIVE
 *...............*/
