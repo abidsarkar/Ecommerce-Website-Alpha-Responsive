@@ -229,6 +229,7 @@ Reusable selector
         c.Mini Product
         d.Main Product
     05.BANNER
+    05.Footer
         a.News Letter
         b.Widgets
         c.Footer Info
@@ -986,6 +987,42 @@ form.search button:hover {
 * 05.Footer
 *...............*/
 
+
+/*................
+* 05.Footer
+  a.News Letter
+*...............*/
+.newsLetter{
+  padding: 2.5em 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.newsLetter h3{
+  font-size: 1.5em;
+}
+.newsLetter p {
+  font-weight: var(--fw3);
+  color: var(--border-color);
+  margin: 0.5em 0 1.5em;
+}
+.newsLetter p strong {
+  color: var(--primary-color);
+}
+.newsLetter form {
+  max-width: 500px;
+  width: var(--percent100);
+}
+/*................
+* 05.Footer
+  b.Widgets
+*...............*/
+
+
+/*................
+* 05.Footer
+  c.Footer info
+*...............*/
+
 /*................
 * 15.RESPONSIVE
 *...............*/
@@ -1190,5 +1227,11 @@ form.search button:hover {
   } */
   .products.main .item {
     flex: 0 0 25%;
+  }
+  /* footer */
+  .newsLetter .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
