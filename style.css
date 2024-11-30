@@ -793,7 +793,7 @@ form.search button:hover {
   height: 20px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='rgba(240,187,64,1)'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z'%3E%3C/path%3E%3C/svg%3E");
   background-position-y: top;
-  background-repeat-y: no-repeat;
+  /* background-repeat-y: no-repeat; */
 }
 /* to set width of stars */
 .products .item:where(:nth-child(3), :nth-child(3)) .stars {
@@ -804,7 +804,7 @@ form.search button:hover {
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  /* -webkit-line-clamp: 2; */
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -1108,6 +1108,13 @@ form.search button:hover {
   padding: 2.5em 0;
   background-color: var(--secondary-dark-color);
   z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  will-change: visibility, opacity;
+}
+.showsearch .search-bottom{
+  visibility: initial;
+  opacity: 1;
 }
 .search-bottom .t-close {
   position: absolute;
@@ -1123,6 +1130,24 @@ form.search button:hover {
 .search-bottom .t-close:hover {
   background-color: var(--primary-color);
 }
+/*................
+* 07.OVERLAY
+*...............*/
+.overlay {
+  position: fixed;
+  width: var(--percent100);
+  height: var(--percent100);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+}
+:where(.showmenu, .showmodal) .overlay {
+	opacity: 1;
+	visibility: inherit;
+} 
 /*................
 * 15.RESPONSIVE
 *...............*/
