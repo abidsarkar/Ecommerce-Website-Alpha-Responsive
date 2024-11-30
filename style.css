@@ -1016,7 +1016,10 @@ form.search button:hover {
 * 05.Footer
   b.Widgets
 *...............*/
-
+.widgets {
+  padding: 3.5em 2.5em;
+  background-color: var(--light-bg-color);
+}
 
 /*................
 * 05.Footer
@@ -1028,6 +1031,10 @@ form.search button:hover {
 *...............*/
 @media screen and (min-width: 481px) {
   .products.main .item {
+    flex: 0 0 50%;
+  }
+  /* footer */
+  .widgets .row {
     flex: 0 0 50%;
   }
 }
@@ -1042,6 +1049,10 @@ form.search button:hover {
   }
   .products.main .item {
     flex: 0 0 33.333%;
+  }
+  /* footer */
+  .widgets .row {
+    flex: 0 0 50%;
   }
 }
 
@@ -1229,9 +1240,13 @@ form.search button:hover {
     flex: 0 0 25%;
   }
   /* footer */
+  .widgets .row {
+    flex: 0 0 25%;
+  }
   .newsLetter .box {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  
 }
