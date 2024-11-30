@@ -100,7 +100,7 @@ h4 {
 Reusable selector
 ....... */
 .container {
-  max-height: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 0.938em;
 }
@@ -691,7 +691,8 @@ form.search button:hover {
 }
 .products .offer ul li {
   position: relative;
-  width: 34px;
+  width: auto;
+  /* width: 34px; */
   height: 34px;
   padding: 0.5em;
   line-height: initial;
@@ -773,9 +774,9 @@ form.search button:hover {
   display: flex;
   flex-direction: column;
 }
-.products:where(.big, .main.one) .content {
-  gap: 1em;
-  margin-top: 1.25em;
+.products:where(.big, .main, .one) .content {
+	gap: 0.7em;
+	margin-top: 1.25em;
 }
 .products .rating {
   display: flex;
@@ -789,10 +790,15 @@ form.search button:hover {
   background-position-y: top;
   background-repeat-y: no-repeat;
 }
+/* to set width of stars */
+.products .item:where(:nth-child(3), :nth-child(3)) .stars {
+	width: 64px;
+}
 .products h3 {
   font-family: 'Rubik';
   font-size: 1em;
   overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -871,9 +877,64 @@ form.search button:hover {
 * 04.PRODUCT
     d.Main Product
 *...............*/
+.products.main .item {
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 0 0.938em;
+  padding-bottom: 2em;
+}
+.products.main .media{
+  height: 390px;
+}
+.products.main .footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 0 1em 1em;
+	border-radius: 7px;
+	z-index: 1;
+	background: linear-gradient(
+		0deg,
+		var(--light-bg-color) 0%,
+		var(--white-color) 70%
+	);
+	opacity: 0;
+	visibility: hidden;
+	will-change: opacity;
+	transition: all 0.2s ease-in-out;
+}
+
+.products.main .item:hover .footer {
+	opacity: 1;
+	visibility: visible;
+}
+
+.products.main .footer ul {
+	list-style: disc;
+	padding: 1.25em 0 0 1.25em;
+	line-height: 1.8;
+	border-top: 1px solid var(--border-color);
+	margin-top: 145px;
+}
+
+.products.main .item:hover .content > *:not(.footer) {
+	z-index: 3;
+}
+
+/*................
+* 05.BANNER
+*...............*/
+
+
 /*................
 * 15.RESPONSIVE
 *...............*/
+@media screen and (min-width: 481px) {
+  .products.main .item{
+  flex: 0 0 50%;
+  }
+  
+}
 @media screen and (min-width: 768px){
   /* must put space after and  */
   .products .price .current{
@@ -882,6 +943,9 @@ form.search button:hover {
   .products.mini{
     flex: 0 0 50%;
   }
+  .products.main .item{
+    flex: 0 0 33.333%;
+    }
 }
 
 
@@ -1060,5 +1124,8 @@ form.search button:hover {
   }
   .products .big .media {
     max-width: 373px;
+  }
+  .products.mini{
+    flex: 0 0 25%;
   }
 }
