@@ -630,6 +630,10 @@ form.search button:hover {
   color: var(--white-color);
   border-radius: 4px;
 }
+.text-content :where(h2, h3) span:first-child {
+  font-weight: var(--fw3);
+  color: var(--light-text-color);
+}
 .text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
   text-transform: uppercase;
@@ -926,6 +930,43 @@ form.search button:hover {
 /*................
 * 05.BANNER
 *...............*/
+.banners .item {
+  position: relative;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+}
+.banner .image{
+  text-align: right;
+}
+.banner .get-gray{
+  background-color: var(--border-color);
+}
+.banner :where(.text-content, .over-link) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--percent100);
+  height: var(--percent100);
+}
+.banner .text-content {
+  padding: 1.5em 2.5em;
+}
+.banner .text-content {
+  padding: 1.5em 2.5em;
+}
+.banner h3 {
+  font-size: calc(1em + 0.5vw);
+  font-weight: var(--fw3);
+}
+.banner h3 span {
+  font-size: 80%;
+}
+.banner .primary-button {
+  z-index: 3;
+}
+/*................
+* 05.Footer
+*...............*/
 
 /*................
 * 15.RESPONSIVE
@@ -940,7 +981,8 @@ form.search button:hover {
   .products .price .current {
     font-size: 1.25em;
   }
-  .products.mini {
+  .products.mini ,
+  .banner .row {
     flex: 0 0 50%;
   }
   .products.main .item {
